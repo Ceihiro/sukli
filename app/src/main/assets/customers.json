@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mang_jerry",
+    "name": "Mang Jerry",
+    "portraitResId": 0,
+    "schedule": "morning",
+    "difficulty": 1,
+    "defaultOrder": [
+      { "itemId": "kopiko", "quantity": 1 },
+      { "itemId": "chippy", "quantity": 2 }
+    ],
+    "specialTrait": "Always pays with exact change"
+  },
+  {
+    "id": "student_boy",
+    "name": "Student Boy",
+    "portraitResId": 0,
+    "schedule": "morning",
+    "difficulty": 1,
+    "defaultOrder": [
+      { "itemId": "coke", "quantity": 1 },
+      { "itemId": "chippy", "quantity": 1 }
+    ],
+    "specialTrait": "Pays with P500, causes change crisis"
+  }
+]

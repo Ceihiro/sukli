@@ -1,0 +1,42 @@
+[
+  {
+    "id": "coke",
+    "name": "Coke",
+    "price": 25,
+    "iconResId": 0,
+    "category": "drinks",
+    "supplierCost": 18
+  },
+  {
+    "id": "chippy",
+    "name": "Chippy",
+    "price": 12,
+    "iconResId": 0,
+    "category": "snacks",
+    "supplierCost": 8
+  },
+  {
+    "id": "kopiko",
+    "name": "Kopiko",
+    "price": 7,
+    "iconResId": 0,
+    "category": "coffee",
+    "supplierCost": 5
+  },
+  {
+    "id": "noodles",
+    "name": "Noodles",
+    "price": 15,
+    "iconResId": 0,
+    "category": "food",
+    "supplierCost": 11
+  },
+  {
+    "id": "rice",
+    "name": "Rice (1kg)",
+    "price": 55,
+    "iconResId": 0,
+    "category": "food",
+    "supplierCost": 42
+  }
+]

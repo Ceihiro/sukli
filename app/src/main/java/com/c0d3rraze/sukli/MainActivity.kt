@@ -1,20 +1,24 @@
 package com.c0d3rraze.sukli
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.c0d3rraze.sukli.utils.JsonHelper
 
 class MainActivity : AppCompatActivity() {
+
+    private val TAG = "SukliTest"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        val items = JsonHelper.loadItems(this)
+        val customers = JsonHelper.loadCustomers(this)
+
+        Log.d(TAG, "Loaded ${items.size} items")
+        Log.d(TAG, "First item: ${items.firstOrNull()?.name}")
+        Log.d(TAG, "Loaded ${customers.size} customers")
+        Log.d(TAG, "First customer: ${customers.firstOrNull()?.name}")
     }
 }
