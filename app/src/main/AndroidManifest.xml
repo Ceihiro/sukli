@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.store.StoreActivity" />
+        <activity android:name=".ui.title.TitleActivity" />
     </application>
 
 </manifest>
