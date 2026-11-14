@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".ui.store.StoreActivity" />
         <activity android:name=".ui.title.TitleActivity" />
+        <activity android:name=".ui.endofday.EndOfDayActivity" />
     </application>
 
 </manifest>

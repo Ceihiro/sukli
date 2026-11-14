@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.c0d3rraze.sukli.R
+import com.c0d3rraze.sukli.ui.endofday.EndOfDayActivity
 import com.c0d3rraze.sukli.ui.title.TitleActivity
 import com.c0d3rraze.sukli.utils.JsonHelper
 
@@ -63,8 +64,14 @@ class StoreActivity : AppCompatActivity() {
                 } else {
                     // All customers served - end of day
                     Toast.makeText(this, "Day Complete! Total Profit: P$dailyProfit", Toast.LENGTH_LONG).show()
-                    btnServe.text = "DAY DONE"
-                    btnServe.isEnabled = false
+                    Log.d(TAG, "Day complete. Profit: $dailyProfit")
+
+                    val intent = Intent(this, EndOfDayActivity::class.java)
+                    intent.putExtra("DAY_NUMBER", 1)
+                    intent.putExtra("PROFIT", dailyProfit)
+                    intent.putExtra("CUSTOMERS_SERVED", customerDialogues.size)
+                    startActivity(intent)
+                    finish()
                 }
             } else {
                 Toast.makeText(this, "Add items first!", Toast.LENGTH_SHORT).show()
