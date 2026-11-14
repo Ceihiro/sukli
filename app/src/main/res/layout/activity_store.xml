@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1">
+
+    <!-- Customer Dialogue Panel -->
+    <LinearLayout
+        android:id="@+id/customerPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+
+        <TextView
+            android:id="@+id/tvDialogue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order here..."
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Item Shelf -->
+    <LinearLayout
+        android:id="@+id/shelfPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/customerPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnCoke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coke\nP25"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/btnChippy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chippy\nP12"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/btnKopiko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kopiko\nP7"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+    <!-- Total Display -->
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: P0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#D84315"
+        app:layout_constraintTop_toBottomOf="@id/shelfPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Cash Drawer -->
+    <LinearLayout
+        android:id="@+id/cashPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/btnPay500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay P500"
+            android:backgroundTint="#4CAF50" />
+    </LinearLayout>
+
+    <!-- Change Display -->
+    <TextView
+        android:id="@+id/tvChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change: P0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        app:layout_constraintTop_toBottomOf="@id/cashPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
