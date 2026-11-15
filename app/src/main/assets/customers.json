@@ -2,25 +2,275 @@
   {
     "id": "mang_jerry",
     "name": "Mang Jerry",
-    "portraitResId": 0,
-    "schedule": "morning",
-    "difficulty": 1,
-    "defaultOrder": [
-      { "itemId": "kopiko", "quantity": 1 },
-      { "itemId": "chippy", "quantity": 2 }
+    "role": "Jeepney Driver (Pasada Route)",
+    "schedule": "Morning Rush (5:30 AM)",
+    "avatarEmoji": "🚐",
+    "dialogues": [
+      "Hey Kiko! Wake me up with a hot coffee and some warm pandesal bread before I line up at the jeepney terminal. Here is a 20-peso bill!",
+      "Kiko, I would like 1 Kopiko coffee and 1 order of Pandesal bread. I am paying with a ₱20 bill.",
+      "Kopiko Coffee: 1 (₱12), Pandesal: 1 (₱6). Total: ₱18. Paid: ₱20 (Change: ₱2)."
     ],
-    "specialTrait": "Always pays with exact change"
+    "expectedItems": [
+      { "itemId": "kopiko", "quantity": 1 },
+      { "itemId": "pandesal", "quantity": 1 }
+    ],
+    "paymentAmount": 20,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 2,
+    "specialTrait": "Lola Carmen's daily regular. Early riser before terminal queue.",
+    "storyNotes": "If you open early and count change accurately, you are his favorite morning stop."
   },
   {
-    "id": "student_boy",
-    "name": "Student Boy",
-    "portraitResId": 0,
-    "schedule": "morning",
-    "difficulty": 1,
-    "defaultOrder": [
-      { "itemId": "coke", "quantity": 1 },
-      { "itemId": "chippy", "quantity": 1 }
+    "id": "ate_susan",
+    "name": "Ate Susan",
+    "role": "Market Vegetable Vendor",
+    "schedule": "Morning Rush (6:15 AM)",
+    "avatarEmoji": "🥬",
+    "dialogues": [
+      "Good morning, Kiko! Give me two shampoo sachets and a bar of bath soap. Here is a ₱100 bill, don't shortchange me!",
+      "Kiko, two Sunsilk shampoo sachets and one Safeguard bath soap. I will pay with a ₱100 bill.",
+      "Shampoo Sachet: 2 (₱16), Bath Soap: 1 (₱22). Total: ₱38. Paid: ₱100 (Change: ₱62)."
     ],
-    "specialTrait": "Pays with P500, causes change crisis"
+    "expectedItems": [
+      { "itemId": "shampoo", "quantity": 2 },
+      { "itemId": "soap", "quantity": 1 }
+    ],
+    "paymentAmount": 100,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 2,
+    "specialTrait": "Sharp with coins, always watching every single peso.",
+    "storyNotes": "Lola Carmen's closest friend from the public vegetable market."
+  },
+  {
+    "id": "kuya_bodjie",
+    "name": "Kuya Bodjie",
+    "role": "Construction Worker",
+    "schedule": "Morning Rush (6:45 AM)",
+    "avatarEmoji": "👷",
+    "dialogues": [
+      "Hey buddy Kiko! A cold Cobra energy drink and a pack of crackers for my construction shift. But... Friday is payday, can I put it on my tab?",
+      "Brother Kiko, one Cobra Energy Drink and one pack of SkyFlakes. Can you list this on my credit tab for now?",
+      "Cobra Drink: 1 (₱28), SkyFlakes: 1 (₱10). Total: ₱38. Requested Credit Tab: ₱38."
+    ],
+    "expectedItems": [
+      { "itemId": "energy_drink", "quantity": 1 },
+      { "itemId": "skyflakes", "quantity": 1 }
+    ],
+    "paymentAmount": 38,
+    "paysExact": false,
+    "asksForUtang": true,
+    "utangAmount": 38,
+    "relationshipHearts": 1,
+    "specialTrait": "Hardworking laborer, short on cash before payday.",
+    "storyNotes": "Working on the barangay bridge project. Always settles debt on salary day."
+  },
+  {
+    "id": "student_junjun",
+    "name": "Jun-Jun",
+    "role": "Grade 7 Student (San Roque High)",
+    "schedule": "School Rush (7:15 AM)",
+    "avatarEmoji": "🎒",
+    "dialogues": [
+      "Kuya Kiko! One pack of chips and sweet candy before the morning bell! My mom gave me a crisp ₱500 bill, do you have change for this?",
+      "Kuya Kiko, please give me one Chippy BBQ chips and one Choc-Nut candy. I only have a five-hundred peso bill (₱500).",
+      "Chippy: 1 (₱15), Choc-Nut: 1 (₱3). Total: ₱18. Paid: ₱500 (Change: ₱482)."
+    ],
+    "expectedItems": [
+      { "itemId": "chippy", "quantity": 1 },
+      { "itemId": "chocnut", "quantity": 1 }
+    ],
+    "paymentAmount": 500,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 2,
+    "specialTrait": "THE CHANGE CRISIS! Hands over a ₱500 bill for an ₱18 purchase.",
+    "storyNotes": "If short on coins, offer him candy as change (Sukling Kendi) or ask for smaller bills!"
+  },
+  {
+    "id": "teacher_fe",
+    "name": "Teacher Fe",
+    "role": "Public School Teacher",
+    "schedule": "School Rush (7:40 AM)",
+    "avatarEmoji": "👩‍🏫",
+    "dialogues": [
+      "Good morning, Kiko! I need a hot coffee and clean crackers for our faculty meeting. Here is an exact fifty-peso bill.",
+      "Good morning! One Kopiko 3-in-1 coffee and one SkyFlakes crackers pack, please. I am paying with ₱50.",
+      "Kopiko Coffee: 1 (₱12), SkyFlakes: 1 (₱10). Total: ₱22. Paid: ₱50 (Change: ₱28)."
+    ],
+    "expectedItems": [
+      { "itemId": "kopiko", "quantity": 1 },
+      { "itemId": "skyflakes", "quantity": 1 }
+    ],
+    "paymentAmount": 50,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 3,
+    "specialTrait": "Provides reading tips, grammar hints, and functional literacy feedback.",
+    "storyNotes": "Kiko's former elementary teacher. Proud to see Kiko keeping the store alive."
+  },
+  {
+    "id": "lola_remedios",
+    "name": "Lola Remedios",
+    "role": "Barangay Elder (80 Years Old)",
+    "schedule": "Afternoon Lull (10:30 AM)",
+    "avatarEmoji": "👵",
+    "dialogues": [
+      "Dear Kiko... what did I come here for again? Ah, yes! Warm chocolate to soothe my knees and a candle in case the night gets dark. Here is a fifty-peso bill...",
+      "Grandson Kiko, one Milo chocolate drink sachet and one white candle. Here is ₱50.",
+      "Milo Sachet: 1 (₱14), Candle: 1 (₱10). Total: ₱24. Paid: ₱50 (Change: ₱26)."
+    ],
+    "expectedItems": [
+      { "itemId": "milo", "quantity": 1 },
+      { "itemId": "candle", "quantity": 1 }
+    ],
+    "paymentAmount": 50,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 3,
+    "specialTrait": "Slow speaker, warm stories about old times and grandmother's memories.",
+    "storyNotes": "Lola Carmen's childhood friend. Mentions hidden secrets about old barangay heirlooms."
+  },
+  {
+    "id": "tatay_ben",
+    "name": "Tatay Ben",
+    "role": "Retired Barangay Tanod",
+    "schedule": "Afternoon Lull (2:00 PM)",
+    "avatarEmoji": "👴",
+    "dialogues": [
+      "Kiko, son! It is scorching hot outside. Give me an ice-cold soda to quench this thirst. Exactly twenty-five pesos right here.",
+      "Kiko, one cold Coke Swakto. Exactly twenty-five pesos (₱25).",
+      "Coke Swakto: 1 (₱25). Total: ₱25. Paid: ₱25 (Exact Payment)."
+    ],
+    "expectedItems": [
+      { "itemId": "coke", "quantity": 1 }
+    ],
+    "paymentAmount": 25,
+    "paysExact": true,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 2,
+    "specialTrait": "Always pays with exact coins. Loves a friendly afternoon chat.",
+    "storyNotes": "Warns Kiko about town inspections and rival price monitoring."
+  },
+  {
+    "id": "mang_kanor",
+    "name": "Mang Kanor",
+    "role": "Street Regular (Tipsy)",
+    "schedule": "Evening Crowd (7:30 PM)",
+    "avatarEmoji": "🥴",
+    "dialogues": [
+      "Heeey... *hic* Kiko my friend! Give me a pack of noodles and a can of sardines... Here is ₱100, make sure you count my change right!",
+      "Kiko, one pack of Instant Pancit Canton and one can of Sardines. Here is one hundred pesos (₱100).",
+      "Pancit Canton: 1 (₱18), Sardines: 1 (₱26). Total: ₱44. Paid: ₱100 (Change: ₱56)."
+    ],
+    "expectedItems": [
+      { "itemId": "noodles", "quantity": 1 },
+      { "itemId": "sardines", "quantity": 1 }
+    ],
+    "paymentAmount": 100,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 1,
+    "specialTrait": "Slurred speech comprehension puzzle. Watch for coin calculations!",
+    "storyNotes": "Can make mental math errors but appreciates quick, honest service.",
+    "drunkSpeech": true
+  },
+  {
+    "id": "call_center_sarah",
+    "name": "Sarah",
+    "role": "Night Shift BPO Agent",
+    "schedule": "Evening Crowd (9:00 PM)",
+    "avatarEmoji": "🎧",
+    "dialogues": [
+      "Kuya, please make it fast! Cobra energy drink and instant noodles. I have a graveyard call center shift at 10 PM. Here is ₱500, please hurry!",
+      "Kuya Kiko, one Cobra Energy Drink and one pack of Pancit Canton. Five hundred pesos (₱500).",
+      "Cobra: 1 (₱28), Pancit Canton: 1 (₱18). Total: ₱46. Paid: ₱500 (Change: ₱454)."
+    ],
+    "expectedItems": [
+      { "itemId": "energy_drink", "quantity": 1 },
+      { "itemId": "noodles", "quantity": 1 }
+    ],
+    "paymentAmount": 500,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 2,
+    "specialTrait": "Always in a hurry, large bills, tips well if served promptly.",
+    "storyNotes": "Works graveyard shifts in an IT-BPO office. Needs quick service."
+  },
+  {
+    "id": "aling_nena",
+    "name": "Aling Nena",
+    "role": "Rival Store Owner (Across Street)",
+    "schedule": "Special Visit (Random)",
+    "avatarEmoji": "🧐",
+    "dialogues": [
+      "Kiko! How much are you selling rice for these days? Let me check your soy sauce bottle. Here is twenty pesos.",
+      "Just buying one small soy sauce bottle to check your prices. Here is ₱20.",
+      "Soy Sauce: 1 (₱12). Total: ₱12. Paid: ₱20 (Change: ₱8)."
+    ],
+    "expectedItems": [
+      { "itemId": "toyo", "quantity": 1 }
+    ],
+    "paymentAmount": 20,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 1,
+    "specialTrait": "Rival competitor scouting Kiko's inventory and change speed.",
+    "storyNotes": "Runs the store across the street. If treated with respect, she offers fair supplier trades."
+  },
+  {
+    "id": "kapitana_helen",
+    "name": "Kapitana Helen",
+    "role": "Barangay Chairman",
+    "schedule": "Special Visit (Official)",
+    "avatarEmoji": "🎖️",
+    "dialogues": [
+      "Good day, Kiko! Just checking in on Lola Carmen's store. Hand me an ice-cold Coke and crackers while I inspect your permit. Here is ₱50.",
+      "Kiko, one Coke Swakto and one pack of SkyFlakes. Here is fifty pesos (₱50).",
+      "Coke: 1 (₱25), SkyFlakes: 1 (₱10). Total: ₱35. Paid: ₱50 (Change: ₱15)."
+    ],
+    "expectedItems": [
+      { "itemId": "coke", "quantity": 1 },
+      { "itemId": "skyflakes", "quantity": 1 }
+    ],
+    "paymentAmount": 50,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 3,
+    "specialTrait": "Inspects permits and cleanliness. High rating yields barangay expansion perks!",
+    "storyNotes": "Holds the official expansion permit for opening the second store."
+  },
+  {
+    "id": "supplier_joms",
+    "name": "Kuya Joms",
+    "role": "Tricycle Wholesale Supplier",
+    "schedule": "Special Visit (Restock)",
+    "avatarEmoji": "🛵",
+    "dialogues": [
+      "Kiko boy! I brought wholesale discounts on rice and cooking oil on my sidecar! Hand me a hot coffee while I unload the sacks. Here's twenty pesos.",
+      "One Kopiko 3-in-1 coffee please, Kiko. Here is ₱20.",
+      "Kopiko Coffee: 1 (₱12). Total: ₱12. Paid: ₱20 (Change: ₱8)."
+    ],
+    "expectedItems": [
+      { "itemId": "kopiko", "quantity": 1 }
+    ],
+    "paymentAmount": 20,
+    "paysExact": false,
+    "asksForUtang": false,
+    "utangAmount": 0,
+    "relationshipHearts": 3,
+    "specialTrait": "Delivers bulk inventory and market price intelligence.",
+    "storyNotes": "Always warns about coming typhoons, shortages, and wholesale deals."
   }
 ]

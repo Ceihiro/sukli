@@ -1,42 +1,152 @@
 [
   {
     "id": "coke",
-    "name": "Coke",
+    "name": "Coke Swakto (Cold)",
     "price": 25,
-    "iconResId": 0,
+    "supplierCost": 18,
     "category": "drinks",
-    "supplierCost": 18
+    "iconEmoji": "🥤",
+    "description": "Ice-cold soda for a hot, humid barangay morning.",
+    "stock": 15
   },
   {
     "id": "chippy",
-    "name": "Chippy",
-    "price": 12,
-    "iconResId": 0,
+    "name": "Chippy BBQ Chips",
+    "price": 15,
+    "supplierCost": 10,
     "category": "snacks",
-    "supplierCost": 8
+    "iconEmoji": "🥔",
+    "description": "Favorite barbecue corn chips for school kids.",
+    "stock": 20
   },
   {
     "id": "kopiko",
-    "name": "Kopiko",
-    "price": 7,
-    "iconResId": 0,
-    "category": "coffee",
-    "supplierCost": 5
+    "name": "Kopiko 3-in-1 Coffee",
+    "price": 12,
+    "supplierCost": 8,
+    "category": "breakfast",
+    "iconEmoji": "☕",
+    "description": "Hot morning coffee sachet to energize jeepney drivers.",
+    "stock": 25
   },
   {
     "id": "noodles",
-    "name": "Noodles",
-    "price": 15,
-    "iconResId": 0,
+    "name": "Instant Pancit Canton",
+    "price": 18,
+    "supplierCost": 13,
     "category": "food",
-    "supplierCost": 11
+    "iconEmoji": "🍜",
+    "description": "Savory calamansi-flavored instant noodles.",
+    "stock": 18
   },
   {
     "id": "rice",
-    "name": "Rice (1kg)",
+    "name": "Sinandomeng Rice (1kg)",
     "price": 55,
-    "iconResId": 0,
+    "supplierCost": 44,
     "category": "food",
-    "supplierCost": 42
+    "iconEmoji": "🍚",
+    "description": "Essential staple food for the neighborhood.",
+    "stock": 10
+  },
+  {
+    "id": "shampoo",
+    "name": "Shampoo Sachet (Tingi)",
+    "price": 8,
+    "supplierCost": 5,
+    "category": "tingi",
+    "iconEmoji": "🧴",
+    "description": "Single-use hair shampoo sachet sold per piece.",
+    "stock": 20
+  },
+  {
+    "id": "soap",
+    "name": "Safeguard Bath Soap",
+    "price": 22,
+    "supplierCost": 16,
+    "category": "tingi",
+    "iconEmoji": "🧼",
+    "description": "Antibacterial white bath soap bar.",
+    "stock": 12
+  },
+  {
+    "id": "energy_drink",
+    "name": "Cobra Energy Drink",
+    "price": 28,
+    "supplierCost": 20,
+    "category": "drinks",
+    "iconEmoji": "⚡",
+    "description": "High-caffeine stamina drink for manual laborers.",
+    "stock": 15
+  },
+  {
+    "id": "pandesal",
+    "name": "Hot Pandesal (2 pcs)",
+    "price": 6,
+    "supplierCost": 4,
+    "category": "breakfast",
+    "iconEmoji": "🥖",
+    "description": "Freshly baked warm bread rolls from the corner panaderia.",
+    "stock": 20
+  },
+  {
+    "id": "candle",
+    "name": "White Candle",
+    "price": 10,
+    "supplierCost": 6,
+    "category": "emergency",
+    "iconEmoji": "🕯️",
+    "description": "Emergency illumination during brownouts and typhoons.",
+    "stock": 15
+  },
+  {
+    "id": "chocnut",
+    "name": "Choc-Nut (Candy Change)",
+    "price": 3,
+    "supplierCost": 2,
+    "category": "snacks",
+    "iconEmoji": "🍫",
+    "description": "Classic peanut chocolate. Perfect as ₱1 change when short on coins!",
+    "stock": 30
+  },
+  {
+    "id": "skyflakes",
+    "name": "SkyFlakes Crackers",
+    "price": 10,
+    "supplierCost": 7,
+    "category": "snacks",
+    "iconEmoji": "🍘",
+    "description": "Crisp saltine crackers for an afternoon snack.",
+    "stock": 18
+  },
+  {
+    "id": "milo",
+    "name": "Milo Chocolate Sachet",
+    "price": 14,
+    "supplierCost": 10,
+    "category": "breakfast",
+    "iconEmoji": "🥛",
+    "description": "Chocolate malt energy powder sachet.",
+    "stock": 16
+  },
+  {
+    "id": "sardines",
+    "name": "Sardines in Tomato Sauce",
+    "price": 26,
+    "supplierCost": 20,
+    "category": "food",
+    "iconEmoji": "🐟",
+    "description": "Canned sardines in rich tomato sauce.",
+    "stock": 14
+  },
+  {
+    "id": "toyo",
+    "name": "Soy Sauce Bottle (100ml)",
+    "price": 12,
+    "supplierCost": 8,
+    "category": "food",
+    "iconEmoji": "🍶",
+    "description": "Essential seasoning for Filipino home cooking.",
+    "stock": 12
   }
 ]

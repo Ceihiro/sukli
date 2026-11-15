@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Candle wax body -->
+    <path
+        android:fillColor="#F5F5F5"
+        android:pathData="M20,18 L28,18 L28,44 L20,44 Z" />
+    <!-- Wax drip -->
+    <path
+        android:fillColor="#EEEEEE"
+        android:pathData="M21,18 L23,18 L23,24 L21,22 Z" />
+    <!-- Wick -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M23.5,14 L24.5,14 L24.5,18 L23.5,18 Z" />
+    <!-- Candle flame -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M24,4 C22,8 21,11 21,13 C21,15 22.5,16 24,16 C25.5,16 27,15 27,13 C27,11 26,8 24,4 Z" />
+    <!-- Inner bright flame -->
+    <path
+        android:fillColor="#FFF59D"
+        android:pathData="M24,7 C23,10 22.5,12 22.5,13.5 C22.5,14.5 23.2,15 24,15 C24.8,15 25.5,14.5 25.5,13.5 C25.5,12 25,10 24,7 Z" />
+</vector>
+

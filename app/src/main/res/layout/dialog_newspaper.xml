@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_newsprint"
+    android:orientation="vertical">
+
+    <!-- Newspaper Masthead -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNewsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THE BARANGAY CHRONICLE"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNewsDateline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vol. XII • Issue 44 • Barangay San Roque Official Gazeteer • Price: ₱5.00"
+            android:textColor="#616161"
+            android:textSize="9.5sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="2dp"
+            android:background="#212121" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:background="#212121" />
+    </LinearLayout>
+
+    <!-- Headline & Articles -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNewsHeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SEVERITY OF COIN SHORTAGE HITS SARI-SARI STORES NATIONWIDE"
+                android:textColor="#B71C1C"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNewsBody1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="Barangay San Roque — Central banks and merchants advise local kiosk operators to stock up on ₱1 and ₱5 coins. Residents entering with ₱500 and ₱1,000 bills risk leaving empty-handed unless store owners substitute with candies or exact change."
+                android:textColor="#37474F"
+                android:textSize="11sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"
+                android:background="#BDBDBD" />
+
+            <TextView
+                android:id="@+id/tvNewsSubHeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WEATHER &amp; LOCAL ADVISORY"
+                android:textColor="#263238"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNewsBody2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="High humidity expected throughout the morning rush. Electric fan usage will drive neighborhood comfort but increase electric billing. Also: Aling Nena's rival stall has begun wholesale restocking."
+                android:textColor="#455A64"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Close Action -->
+    <Button
+        android:id="@+id/btnNewsClose"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_wood_interactive"
+        android:text="FOLD &amp; PUT BACK ON RACK"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+</LinearLayout>
+

@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Paper bag -->
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M12,18 L36,18 L34,44 L14,44 Z" />
+    <!-- Crinkled top -->
+    <path
+        android:fillColor="#6D4C41"
+        android:pathData="M11,16 L37,16 L36,19 L12,19 Z" />
+    <!-- Golden pandesal tops peeking out -->
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M16,16 C16,10 23,10 23,16 Z" />
+    <path
+        android:fillColor="#FFA726"
+        android:pathData="M24,17 C24,11 31,11 31,17 Z" />
+    <!-- Breadcrumb flecks -->
+    <path
+        android:fillColor="#FFE082"
+        android:pathData="M18,13 A1,1 0 1,0 20,13 A1,1 0 1,0 18,13 Z" />
+</vector>
+

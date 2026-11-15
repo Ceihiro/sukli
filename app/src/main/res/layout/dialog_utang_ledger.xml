@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_notebook"
+    android:orientation="vertical">
+
+    <!-- Ledger Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📓 TALAAN NG UTANG (STORE CREDIT BOOK)"
+            android:textColor="#3E2723"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvUtangDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 1 • 6:30 AM"
+            android:textColor="#5D4037"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="6dp"
+        android:background="#D7CCC8" />
+
+    <!-- Notebook Ruled Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F0E6"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvUtangCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pangalan: Kuya Bodjie (Construction Worker)"
+            android:textColor="#1B1B1B"
+            android:textSize="11.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvUtangItemsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Mga Kinuha: Cobra Energy Drink x1, SkyFlakes x1"
+            android:textColor="#424242"
+            android:textSize="10.5sp" />
+
+        <TextView
+            android:id="@+id/tvUtangAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Kabuuang Utang: ₱38.00"
+            android:textColor="#C62828"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingMultiplier="1.1"
+            android:text="&quot;Kiko, sa Biyernes pagkasweldo ko babayaran agad. Pagod na sa trabaho eh.&quot;"
+            android:textColor="#37474F"
+            android:textSize="10.5sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="⚠️ Lola's Rule: Lending credit builds customer loyalty, but too much unpaid utang will drain working capital for grandmother's hospital fund."
+        android:textColor="#8D6E63"
+        android:textSize="9.5sp" />
+
+    <!-- Ledger Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnUtangDecline"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_action_red"
+            android:text="✋ NO, CASH ONLY"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnUtangApprove"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_action_green"
+            android:text="✍️ SIGN CREDIT BOOK"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+

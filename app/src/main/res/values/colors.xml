@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Locked Good Pizza Great Pizza Palette -->
+    <color name="header_brown">#3E2723</color>
+    <color name="bg_cream">#FFF8E1</color>
+    <color name="wood_dark">#5D4037</color>
+    <color name="wood_light">#8D6E63</color>
+    <color name="accent_orange">#E65100</color>
+    <color name="bubble_fill">#FFFFFF</color>
+    <color name="bubble_border">#E65100</color>
+    <color name="text_dark">#3E2723</color>
+    <color name="text_cream">#FFF8E1</color>
+    <color name="price_tag">#FFD54F</color>
+    <color name="shelf_panel">#4E342E</color>
+
+    <!-- Base & Compatibility Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="store_warm_bg">#FFF8E1</color>
+    <color name="store_wood_dark">#3E2723</color>
+    <color name="store_wood_medium">#5D4037</color>
+    <color name="store_wood_light">#8D6E63</color>
+    <color name="store_orange">#E65100</color>
+    <color name="store_orange_light">#FF9800</color>
+    <color name="store_yellow_jeepney">#FFD54F</color>
+    <color name="store_green_money">#2E7D32</color>
+    <color name="store_green_light">#4CAF50</color>
+    <color name="store_red_warning">#C62828</color>
+    <color name="store_blue_counter">#1976D2</color>
+    <color name="store_parchment">#FAEDCD</color>
+    <color name="store_night_dark">#1A0E0A</color>
+    <color name="store_candle_glow">#FFE082</color>
+    <color name="text_primary">#3E2723</color>
+    <color name="text_secondary">#8D6E63</color>
+
+    <!-- Cash Drawer & Denomination Colors -->
+    <color name="cash_drawer_bg">#2C1810</color>
+    <color name="denom_bill_color">#1B5E20</color>
+    <color name="denom_coin_color">#BF360C</color>
+    <color name="change_exact">#4CAF50</color>
+    <color name="change_over">#FF9800</color>
+    <color name="change_under">#F44336</color>
+    <color name="counter_wood">#5D4037</color>
 </resources>

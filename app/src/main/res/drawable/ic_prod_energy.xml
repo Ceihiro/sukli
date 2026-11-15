@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Amber glass bottle -->
+    <path
+        android:fillColor="#E65100"
+        android:pathData="M20,10 L28,10 L29,15 L30,42 C30,44 28,45 27,45 L21,45 C20,45 18,44 18,42 L19,15 Z" />
+    <!-- Gold crown cap -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M21,7 L27,7 L27,10 L21,10 Z" />
+    <!-- Black label -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M18,22 L30,22 L30,36 L18,36 Z" />
+    <!-- Yellow lightning spark on label -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M25,24 L22,29 L25,29 L23,34 L27,28 L24,28 Z" />
+</vector>
+

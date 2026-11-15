@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Hanging sachet body -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M16,6 L32,6 L32,42 L16,42 Z" />
+    <!-- Sachet seal top hole -->
+    <path
+        android:fillColor="#880E4F"
+        android:pathData="M23,8 A1.5,1.5 0 1,0 25,8 A1.5,1.5 0 1,0 23,8 Z" />
+    <!-- Gold curve hair flow -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M18,18 C26,20 22,32 30,34 L28,37 C20,35 24,23 18,21 Z" />
+    <!-- White shampoo drop -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,24 C24,20 27,24 27,26 C27,28 24,28 24,26 Z" />
+</vector>
+

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C1810">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAboutBack"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="← Back"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#8D6E63"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Also keep old IDs so existing Kotlin code still compiles -->
+        <!-- btnBack and btnBackHeader are aliased below -->
+
+        <!-- Title -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📚 Bakit Ginawa Namin Ito?"
+            android:textColor="#FFD54F"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Card 1: The Crisis -->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_tindahan"
+            android:padding="14dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <ImageView android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/char_student_boy_neutral"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ang Suliranin sa Pagbabasa"
+                    android:textColor="#E65100"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ayon sa World Bank at DepEd, 9 sa 10 batang Pilipino ay hindi makaintindi ng simpleng kuwentong binabasa nila. Hindi ito tungkol sa katalinuhan — kundi sa kawalan ng kasanayan sa pagbabasa."
+                    android:textColor="#D7CCC8"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="1.3"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Card 2: The Solution -->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_tindahan"
+            android:padding="14dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="12dp">
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ang Laro Bilang Lunas"
+                    android:textColor="#E65100"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sa Sukli, ikaw si Kiko — isang batang nag-aalaga ng sari-sari store ng pamilya para makapag-ipon para sa gamutan ni Lola Carmen. Basahin ang order ng mga customer sa Tagalog at Taglish. Bilang ng sukli. Alamin kung sinu-sino ang tunay na tumulong."
+                    android:textColor="#D7CCC8"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="1.3"/>
+            </LinearLayout>
+
+            <ImageView android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/char_ate_girl_neutral"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <!-- Card 3: Stats -->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_tindahan"
+            android:padding="14dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 Ang mga Numero"
+                android:textColor="#FFD54F"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔸 90% ng Grade 4 students cannot read with understanding (PISA 2022)\n🔸 Pilipinas: Pang-77 sa 81 bansa sa reading comprehension\n🔸 Tanging 10% lang ang makapag-unawa ng komplikadong teksto\n🔸 Ang sari-sari store: paaralan ng tunay na buhay sa mahigit 1 milyong pamilya"
+                android:textColor="#D7CCC8"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.4"/>
+        </LinearLayout>
+
+        <!-- Card 4: Literacy Pillars (Educational Content) -->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_tindahan"
+            android:padding="14dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📖 Functional Everyday Literacy"
+                android:textColor="#E65100"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Basahin ang colloquial na order ng mga customer — slang, context clues, at Filipino idioms. Walang boring multiple-choice — tunay na pagbabasa ang kailangan!"
+                android:textColor="#D7CCC8"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🪙 Mental Math &amp; Coin Management"
+                android:textColor="#E65100"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Handle realistic Philippine peso bills (₱50, ₱100, ₱500). Kapag kulang ang ₱1 coins, gamitin ang tradisyonal na Sukling Kendi bilang sukli!"
+                android:textColor="#D7CCC8"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="❤️ Empathy, Community &amp; Bayanihan"
+                android:textColor="#E65100"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tulungan ang mga kapitbahay habang nag-iipon para sa gamutan ni Lola Carmen. Pag-aralan ang tiwala, utang, at katatagan ng maliit na negosyo."
+                android:textColor="#D7CCC8"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.3"/>
+        </LinearLayout>
+
+        <!-- Return Button (keep old ID for Kotlin compatibility) -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="RETURN TO TITLE MENU"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/ui_btn_orange"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Version -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sukli: Sari-Sari Stories v1.0 Demo\nMade with ❤️ para sa mga batang Pilipino"
+            android:textColor="#8D6E63"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</ScrollView>

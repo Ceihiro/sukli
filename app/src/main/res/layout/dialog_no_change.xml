@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ui_panel_modal"
+    android:padding="22dp"
+    android:orientation="vertical">
+
+    <!-- Header Frame with Alert -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⚠️ &quot;WALA AKONG BARYA!&quot; (NO CHANGE CRISIS)"
+            android:textColor="#FF5722"
+            android:textSize="13.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNoChangeDrawerStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drawer: Short on Coins"
+            android:textColor="#D7CCC8"
+            android:textSize="9.5sp" />
+    </LinearLayout>
+
+    <!-- Customer Confrontation Box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#1B120B"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvNoChangeCustomerAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="🚐"
+            android:textSize="40sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNoChangeCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mang Jerry (Jeepney Driver)"
+                android:textColor="#FFD54F"
+                android:textSize="11.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNoChangeExplanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:lineSpacingMultiplier="1.15"
+                android:text="&quot;Kiko, I only have this ₱100 bill from my morning boundary! You don't have ₱75 change?! My passengers are waiting at the terminal!&quot;"
+                android:textColor="#FFF8E7"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Choose how to handle the customer:"
+        android:textColor="#D7CCC8"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+
+        <!-- Option 1: Offer Candy Change -->
+        <Button
+            android:id="@+id/btnOptionCandy"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_btn_wood_interactive"
+            android:text="🍬 &quot;Pwede bang kendi na lang ang ₱1 sukli?&quot; (Offer Choc-Nut)"
+            android:textColor="#FFF9C4"
+            android:textSize="10sp" />
+
+        <!-- Option 2: Ask for Smaller Bills / Exact coins -->
+        <Button
+            android:id="@+id/btnOptionAskSmaller"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_btn_wood_interactive"
+            android:text="🔍 &quot;Boss, baka may barya kayo sa bulsa?&quot; (Ask for Coins)"
+            android:textColor="#E0E0E0"
+            android:textSize="10sp" />
+
+        <!-- Option 3: Cancel / Back to Drawer -->
+        <Button
+            android:id="@+id/btnOptionCancel"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_btn_action_red"
+            android:text="RE-COUNT CASH DRAWER"
+            android:textColor="#FFFFFF"
+            android:textSize="9.5sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

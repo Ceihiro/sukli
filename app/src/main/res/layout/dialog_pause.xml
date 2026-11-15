@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ui_panel_modal"
+    android:padding="20dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STORE PAUSED"
+        android:textColor="#3E2723"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvPauseStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day 1 • 7:00 AM • Profit: ₱0"
+        android:textColor="#8D6E63"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="18dp" />
+
+    <!-- Resume Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPauseResume"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="▶ RESUME"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/ui_btn_orange"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Chapters &amp; Roadmap Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPauseChapters"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="📖 CHAPTER STORIES &amp; ROADMAP"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/ui_btn_gray"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Audio &amp; Ambience Settings Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPauseAudio"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="⚙️ AUDIO &amp; AMBIENCE SETTINGS"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/ui_btn_gray"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Exit to Title Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPauseExit"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="🏠 SAVE &amp; RETURN TO TITLE"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/ui_btn_gray" />
+
+</LinearLayout>

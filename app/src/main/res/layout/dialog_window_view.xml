@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_vintage_wood"
+    android:orientation="vertical">
+
+    <!-- Header Frame -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🪟 WINDOW TO BARANGAY SAN ROQUE"
+            android:textColor="#FFD54F"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWindowWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="☀️ 6:15 AM • Warm &amp; Humid"
+            android:textColor="#D7CCC8"
+            android:textSize="10.5sp" />
+    </LinearLayout>
+
+    <!-- Visual Scene Panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#150E09"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvStreetScene"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.25"
+            android:text="A colorful stainless-steel passenger jeepney rumbles past, exhaust curling into the golden morning sun. Schoolchildren in white and navy uniforms hurry towards San Roque Elementary.\n\nAcross the narrow asphalt road, Aling Nena sweeps the porch of her rival grocery store, eyeing your open shutter with suspicion."
+            android:textColor="#FFF8E7"
+            android:textSize="11.5sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#3E2723" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 TIP: Keep your fan spinning on humid mornings so waiting customers don't lose their patience!"
+            android:textColor="#81C784"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnWindowReturn"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_wood_interactive"
+        android:text="RETURN TO COUNTER HATCH"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+</LinearLayout>
+

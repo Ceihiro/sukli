@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Sachet body -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M14,6 L34,6 L34,42 L14,42 Z" />
+    <!-- White coffee sachet banner -->
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M14,16 L34,16 L34,30 L14,30 Z" />
+    <!-- Red Kopiko brand box -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M17,19 L31,19 L31,24 L17,24 Z" />
+    <!-- Coffee bean / cup emblem -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M21,34 C21,32 27,32 27,34 L26,38 L22,38 Z" />
+</vector>
+

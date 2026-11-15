@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Bag body -->
+    <path
+        android:fillColor="#F57C00"
+        android:pathData="M12,8 L36,8 L38,40 L10,40 Z" />
+    <!-- Top & bottom crinkles -->
+    <path
+        android:fillColor="#E65100"
+        android:pathData="M10,6 L38,6 L36,9 L12,9 Z" />
+    <path
+        android:fillColor="#E65100"
+        android:pathData="M9,39 L39,39 L38,42 L10,42 Z" />
+    <!-- Yellow center burst -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M14,18 L34,18 L33,30 L15,30 Z" />
+    <!-- Barbecue text line -->
+    <path
+        android:fillColor="#B71C1C"
+        android:pathData="M17,23 L31,23 L31,25 L17,25 Z" />
+</vector>
+

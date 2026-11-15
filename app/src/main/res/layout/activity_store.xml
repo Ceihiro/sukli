@@ -1,178 +1,1131 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  SUKLI: SARI-SARI STORIES — MAIN STORE SCREEN
+  Landscape-only. Clean layout with zero text overlaps or leaking.
+-->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF8E1">
+    android:background="@drawable/bg_store_interior">
 
-    <!-- Customer Dialogue Panel -->
+    <!-- ════════════════════════════════════════════════════════
+         1. TOP HEADER BAR (42dp tall)
+         ════════════════════════════════════════════════════════ -->
     <LinearLayout
-        android:id="@+id/customerPanel"
+        android:id="@+id/headerBar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:background="#FFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="42dp"
+        android:background="#DD3E2723"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/tvDayNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="☀️ Day 1 • 7:00 AM"
+            android:textColor="#FFF8E1"
+            android:textSize="12.5sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Calculator toggle button -->
+        <FrameLayout
+            android:id="@+id/btnHeaderCalc"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_btn_wood_interactive"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="🧮"
+                android:textSize="15sp" />
+        </FrameLayout>
+
+        <!-- Coin icon + profit -->
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ui_coin_icon" />
+
+        <TextView
+            android:id="@+id/tvTotalProfit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="₱0"
+            android:textColor="#FFD54F"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Pause button -->
+        <FrameLayout
+            android:id="@+id/btnPause"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_btn_wood_interactive"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="⏸"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ════════════════════════════════════════════════════════
+         2. RIGHT SHELF PANEL (21% width, right side)
+         ════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/itemShelf"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#EE3E2723"
+        android:elevation="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingHorizontal="6dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerBar"
+        app:layout_constraintWidth_percent="0.21">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="TINDAHAN"
+            android:textColor="#FFD54F"
+            android:textSize="10.5sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08" />
+
+        <!-- COKE -->
+        <FrameLayout
+            android:id="@+id/btnCoke"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/bg_shelf_item"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_coke" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coke"
+                        android:textColor="#FFF8E1"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₱25"
+                        android:textColor="#FFD54F"
+                        android:textSize="9.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- CHIPPY -->
+        <FrameLayout
+            android:id="@+id/btnChippy"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/bg_shelf_item"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_chippy" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chippy"
+                        android:textColor="#FFF8E1"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₱12"
+                        android:textColor="#FFD54F"
+                        android:textSize="9.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- KOPIKO -->
+        <FrameLayout
+            android:id="@+id/btnKopiko"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/bg_shelf_item"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_kopiko" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kopiko"
+                        android:textColor="#FFF8E1"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₱7"
+                        android:textColor="#FFD54F"
+                        android:textSize="9.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- NOODLES -->
+        <FrameLayout
+            android:id="@+id/btnNoodles"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_shelf_item"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_noodles" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Noodles"
+                        android:textColor="#FFF8E1"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₱15"
+                        android:textColor="#FFD54F"
+                        android:textSize="9.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Total Price Display -->
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Total: ₱0"
+            android:textColor="#FFD54F"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="3dp"/>
+
+        <!-- Customer Payment Trigger Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPay500"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/ui_btn_orange"
+            android:text="Bayad ₱50"
+            android:textColor="#FFFFFF"
+            android:textSize="10.5sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- ════════════════════════════════════════════════════════
+         3. CHARACTER (Half-body behind counter on left)
+         ════════════════════════════════════════════════════════ -->
+    <ImageView
+        android:id="@+id/ivCharacter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/char_student_boy_neutral"
+        app:layout_constraintBottom_toTopOf="@id/counterSurface"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerBar"
+        app:layout_constraintWidth_percent="0.28"
+        android:layout_marginBottom="-6dp" />
+
+    <!-- ════════════════════════════════════════════════════════
+         4. SPEECH BUBBLE (Compact comic bubble beside character,
+            NEVER covers the background shelves or item shelf!)
+         ════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/speechBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        android:maxWidth="260dp"
+        android:background="@drawable/bg_speech_bubble"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:elevation="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@id/ivCharacter"
+        app:layout_constraintEnd_toStartOf="@id/itemShelf"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="@id/ivCharacter"
+        app:layout_constraintBottom_toTopOf="@id/counterSurface"
+        app:layout_constraintVertical_bias="0.12">
+
+        <!-- Customer Name Tag -->
         <TextView
             android:id="@+id/tvCustomerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Customer"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#333333" />
+            android:layout_marginBottom="2dp"
+            android:text="Popoy"
+            android:textColor="#E65100"
+            android:textSize="11.5sp"
+            android:textStyle="bold" />
 
+        <!-- Spoken Dialogue -->
         <TextView
             android:id="@+id/tvDialogue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Order here..."
-            android:textSize="16sp"
-            android:textColor="#555555"
-            android:layout_marginTop="4dp" />
-
-        <Button
-            android:id="@+id/btnTapToAsk"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Tap to Ask"
+            android:layout_marginBottom="4dp"
+            android:lineSpacingMultiplier="1.15"
+            android:text="Kuya Kiko, pabili ng Coke tsaka Chippy. Eto ₱50."
+            android:textColor="#3E2723"
             android:textSize="12sp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="#FF9800" />
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvComprehension"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="First Try (100%)"
+                android:textColor="#8D6E63"
+                android:textSize="9.5sp"
+                android:textStyle="italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAsk"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:background="@drawable/ui_btn_gray"
+                android:text="Tanungin"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="8dp" />
+        </LinearLayout>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvComprehension"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Comprehension: First Try"
-        android:textSize="12sp"
-        android:textColor="#757575"
-        android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/customerPanel"
+    <!-- ════════════════════════════════════════════════════════
+         5. COUNTER SURFACE (Wood plank bar at bottom, 130dp)
+         ════════════════════════════════════════════════════════ -->
+    <ImageView
+        android:id="@+id/counterSurface"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ui_panel_counter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itemShelf"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Item Shelf -->
+    <!-- Cash register icon (clicks to open side calculator) -->
+    <ImageView
+        android:id="@+id/ivCashRegister"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ui_cash_register"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/counterSurface"
+        app:layout_constraintStart_toStartOf="@id/counterSurface" />
+
+    <!-- ════════════════════════════════════════════════════════
+         6. COUNTER TRAY & INFO AREA (Active during ordering)
+         ════════════════════════════════════════════════════════ -->
     <LinearLayout
-        android:id="@+id/shelfPanel"
+        android:id="@+id/layoutCounterTrayArea"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/customerPanel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="4dp"
+        app:layout_constraintStart_toEndOf="@id/ivCashRegister"
+        app:layout_constraintEnd_toStartOf="@id/btnServe"
+        app:layout_constraintTop_toTopOf="@id/counterSurface"
+        app:layout_constraintBottom_toBottomOf="@id/counterSurface">
 
-        <Button
-            android:id="@+id/btnCoke"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Coke\nP25"
-            android:layout_margin="8dp" />
+        <!-- Counter info row -->
+        <LinearLayout
+            android:id="@+id/layoutCounterInfo"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnChippy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chippy\nP12"
-            android:layout_margin="8dp" />
+            <TextView
+                android:id="@+id/tvOrderDue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order: ₱0"
+                android:textColor="#FFF8E1"
+                android:textSize="11.5sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"/>
 
-        <Button
-            android:id="@+id/btnKopiko"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kopiko\nP7"
-            android:layout_margin="8dp" />
+            <TextView
+                android:id="@+id/tvChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sukli: ₱0"
+                android:textColor="#A5D6A7"
+                android:textSize="11.5sp"
+                android:textStyle="bold"/>
 
-        <Button
-            android:id="@+id/btnNoodles"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Noodles\nP15"
-            android:layout_margin="8dp" />
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tvCounterHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pindutin ang items sa shelf →"
+                android:textColor="#D7CCC8"
+                android:textSize="9.5sp"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
+        <!-- Placed items scrollable counter tray -->
+        <HorizontalScrollView
+            android:id="@+id/scrollCounterTray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:background="#22000000">
+
+            <LinearLayout
+                android:id="@+id/layoutCounterItems"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp" />
+        </HorizontalScrollView>
     </LinearLayout>
 
-    <!-- Total Display -->
-    <TextView
-        android:id="@+id/tvTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total: P0"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#D84315"
-        app:layout_constraintTop_toBottomOf="@id/shelfPanel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
-
-    <!-- Cash Drawer -->
+    <!-- ════════════════════════════════════════════════════════
+         7. PHYSICAL CASH DRAWER PANEL (Sits strictly ON counter,
+            covering the tray when paid, NEVER overlapping dialogue!)
+         ════════════════════════════════════════════════════════ -->
     <LinearLayout
-        android:id="@+id/cashPanel"
+        android:id="@+id/layoutCashDrawer"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTotal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp">
+        android:layout_height="0dp"
+        android:background="#FA3E2723"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="4dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/ivCashRegister"
+        app:layout_constraintEnd_toStartOf="@id/btnServe"
+        app:layout_constraintTop_toTopOf="@id/counterSurface"
+        app:layout_constraintBottom_toBottomOf="@id/counterSurface">
 
-        <Button
-            android:id="@+id/btnPay500"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pay P500"
-            android:backgroundTint="#4CAF50" />
+        <!-- Top summary row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvChangeDue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kailangan: ₱0"
+                android:textColor="#A5D6A7"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvChangeGiven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ibinigay: ₱0"
+                android:textColor="#FFD54F"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvChangeStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kulang pa..."
+                android:textColor="#F44336"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+
+            <!-- Reset Button for Children -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnResetChange"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:background="@drawable/ui_btn_orange"
+                android:text="↺ Bawiin (Reset)"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="6dp" />
+        </LinearLayout>
+
+        <!-- Change tray summary in 1 line -->
+        <TextView
+            android:id="@+id/tvChangeTrayContents"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:gravity="center_vertical"
+            android:text="I-tap ang bills/coins para ibigay ang sukli."
+            android:textColor="#D7CCC8"
+            android:textSize="9sp"
+            android:textStyle="italic"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <!-- Denomination buttons row (5 buttons cleanly filling space) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp">
+
+            <!-- ₱20 Bill -->
+            <LinearLayout
+                android:id="@+id/btnBill20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_denom_btn"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💵 ₱20"
+                    android:textColor="#A5D6A7"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- ₱10 Coin -->
+            <LinearLayout
+                android:id="@+id/btnCoin10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_denom_coin"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🪙 ₱10"
+                    android:textColor="#FFD54F"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- ₱5 Coin -->
+            <LinearLayout
+                android:id="@+id/btnCoin5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_denom_coin"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🪙 ₱5"
+                    android:textColor="#FFD54F"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- ₱1 Coin -->
+            <LinearLayout
+                android:id="@+id/btnCoin1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_denom_coin"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🪙 ₱1"
+                    android:textColor="#FFD54F"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- 🍬 Candy (₱1 substitute) -->
+            <LinearLayout
+                android:id="@+id/btnCandyDenom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_wood_interactive"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍬 ₱1"
+                    android:textColor="#FFF8E1"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- Change Display -->
-    <TextView
-        android:id="@+id/tvChange"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change: P0"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#2E7D32"
-        app:layout_constraintTop_toBottomOf="@id/cashPanel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
-
-    <!-- Cash Drawer Status -->
-    <TextView
-        android:id="@+id/tvCashDrawer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bills: P500x1  P100x2  P50x3  P20x5"
-        android:textSize="12sp"
-        android:textColor="#757575"
-        app:layout_constraintTop_toBottomOf="@id/tvChange"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp" />
-
-    <!-- Serve Button -->
-    <Button
+    <!-- ════════════════════════════════════════════════════════
+         8. SERVE BUTTON ("IBIGAY", right side of counter)
+         ════════════════════════════════════════════════════════ -->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnServe"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:text="SERVE CUSTOMER"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:layout_width="72dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/ui_btn_orange"
+        android:text="IBIGAY"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#2196F3"
-        app:layout_constraintTop_toBottomOf="@id/tvChange"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/counterSurface"
+        app:layout_constraintEnd_toStartOf="@id/itemShelf"
+        app:layout_constraintTop_toTopOf="@id/counterSurface" />
+
+    <!-- ════════════════════════════════════════════════════════
+         9. SIDE CALCULATOR OVERLAY (TableLayout keypad)
+         ════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/layoutSideCalculator"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:background="#F0FFF8E1"
+        android:elevation="24dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintTop_toBottomOf="@id/headerBar">
+
+        <!-- Title row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🧮 Kalkulahin"
+                android:textColor="#3E2723"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnSideCalcClose"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="✕"
+                android:textColor="#8D6E63"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- LCD Screen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2E3A23"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/tvSideCalcHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="start"
+                android:fontFamily="monospace"
+                android:gravity="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="#A5C68A"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvSideCalcDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="end"
+                android:maxLines="1"
+                android:text="0"
+                android:textColor="#D7F5BD"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Helper row: Due | Paid | =Sukli -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSideCalcHelperTotal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/ui_btn_gray"
+                android:padding="0dp"
+                android:text="Due"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSideCalcHelperPaid"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/ui_btn_gray"
+                android:padding="0dp"
+                android:text="Paid"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSideCalcHelperSukli"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:background="@drawable/ui_btn_orange"
+                android:padding="0dp"
+                android:text="=Sukli"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Keypad TableLayout -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <!-- Row 1: C, DEL, ÷, × -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginBottom="2dp">
+
+                <Button
+                    android:id="@+id/btnSideCalcC"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#B71C1C"
+                    android:padding="0dp"
+                    android:text="C"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10.5sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalcDel"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#5D4037"
+                    android:padding="0dp"
+                    android:text="DEL"
+                    android:textColor="#FFFFFF"
+                    android:textSize="9sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalcDiv"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#8D6E63"
+                    android:padding="0dp"
+                    android:text="÷"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalcMul"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8D6E63"
+                    android:padding="0dp"
+                    android:text="×"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <!-- Row 2: 7, 8, 9, - -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginBottom="2dp">
+
+                <Button
+                    android:id="@+id/btnSideCalc7"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="7"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalc8"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="8"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalc9"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="9"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalcSub"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8D6E63"
+                    android:padding="0dp"
+                    android:text="-"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </TableRow>
+
+            <!-- Row 3: 4, 5, 6, + -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginBottom="2dp">
+
+                <Button
+                    android:id="@+id/btnSideCalc4"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="4"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalc5"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="5"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalc6"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="6"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalcAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8D6E63"
+                    android:padding="0dp"
+                    android:text="+"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </TableRow>
+
+            <!-- Row 4: 1, 2, 3, = -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginBottom="2dp">
+
+                <Button
+                    android:id="@+id/btnSideCalc1"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="1"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalc2"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="2"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalc3"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="3"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalcEq"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_weight="1"
+                    android:layout_span="1"
+                    android:backgroundTint="#E65100"
+                    android:padding="0dp"
+                    android:text="="
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Row 5: 0, 00, . -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+
+                <Button
+                    android:id="@+id/btnSideCalc0"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textColor="#FFF8E1"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalc00"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="00"
+                    android:textColor="#FFF8E1"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btnSideCalcDot"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="#4E342E"
+                    android:padding="0dp"
+                    android:text="."
+                    android:textColor="#FFF8E1"
+                    android:textSize="12sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

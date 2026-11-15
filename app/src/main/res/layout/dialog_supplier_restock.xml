@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="520dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_vintage_wood"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🚚 KUYA JOMS WHOLESALE RESTOCK"
+            android:textColor="#FFD54F"
+            android:textSize="13.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSupplierCashOnHand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash: ₱500"
+            android:textColor="#81C784"
+            android:textSize="10.5sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="&quot;Kiko! Delivered straight from Divisoria market. Choose your wholesale bundles:&quot;"
+        android:textColor="#D7CCC8"
+        android:textSize="10.5sp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnBundleA"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_btn_wood_interactive"
+            android:text="☕ Bundle A: 10x Coffee + 10x Pandesal (₱80)"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnBundleB"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_btn_wood_interactive"
+            android:text="🥤 Bundle B: 10x Cold Soda + 10x Chips (₱180)"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnBundleC"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_btn_wood_interactive"
+            android:text="🍜 Bundle C: 10x Instant Noodles + 5x Rice (₱280)"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnBundleD"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_btn_wood_interactive"
+            android:text="🕯️ Bundle D: 10x Candles + 10x Candy Change (₱60)"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSupplierClose"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_action_red"
+        android:text="CLOSE RESTOCK CRATE"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+</LinearLayout>
+

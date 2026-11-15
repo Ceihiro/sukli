@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Sardine Oval Can Body -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M11,14 C11,11 16,9 24,9 C32,9 37,11 37,14 L37,35 C37,38 32,40 24,40 C16,40 11,38 11,35 Z" />
+    <!-- Metallic Top Rim -->
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M11,14 C11,11 16,9 24,9 C32,9 37,11 37,14 C37,17 32,19 24,19 C16,19 11,17 11,14 Z" />
+    <!-- Metallic Can Lid Groove -->
+    <path
+        android:fillColor="#78909C"
+        android:pathData="M14,14 C14,12 18,11 24,11 C30,11 34,12 34,14 C34,16 30,17 24,17 C18,17 14,16 14,14 Z" />
+    <!-- Yellow center label with Fish silhouette -->
+    <path
+        android:fillColor="#FBC02D"
+        android:pathData="M11,22 L37,22 L37,33 L11,33 Z" />
+    <!-- Blue fish silhouette -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M16,27 C19,25 24,25 28,27 L32,25 L31,28 L32,30 L28,28 C24,29 19,29 16,27 Z" />
+    <!-- Bottom Rim metallic -->
+    <path
+        android:fillColor="#90A4AE"
+        android:pathData="M11,35 C11,38 16,40 24,40 C32,40 37,38 37,35 L37,37 C37,40 32,42 24,42 C16,42 11,40 11,37 Z" />
+</vector>
+

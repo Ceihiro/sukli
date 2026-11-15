@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="480dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_vintage_wood"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔒 CLOSE STORE SHUTTERS EARLY?"
+        android:textColor="#FFD54F"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="If you leave now, today's shift will be abandoned and unserved neighbors will go to Aling Nena's rival store across the street.\n\nAre you sure you want to pull down the rolling shutter?"
+        android:textColor="#FFF8E7"
+        android:textSize="11.5sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnExitCancel"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_wood_interactive"
+            android:text="KEEP STORE OPEN"
+            android:textColor="#FFFFFF"
+            android:textSize="10.5sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnExitConfirm"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_action_red"
+            android:text="PULL SHUTTER &amp; EXIT"
+            android:textColor="#FFFFFF"
+            android:textSize="10.5sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+
